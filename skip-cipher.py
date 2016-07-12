@@ -90,3 +90,24 @@ def main():
         print 'Decrypted message:', decrypted_message
         
 main()
+
+# Prep for re-doing the initial function
+
+#def secrecy():
+#
+#    try:
+#        x = int(raw_input('Encrypt (1) OR decrypt (2): '))        
+#    except ValueError as err:
+#        print err, '; please enter a 1 to encrypt or a 2 to decrypt.'
+#        secrecy()
+#    else:
+#        if x == 1:
+#            print 'Sent to encryption funcion'
+#        elif x == 2:
+#            print 'Sent to decryption function'
+#        else:
+#            print 'Number entered is not a 1 or 2. Please enter a 1 to encrypt or a 2 to decrypt.'
+#            secrecy()
+#                    
+#if __name__ == '__main__':
+#    secrecy()
