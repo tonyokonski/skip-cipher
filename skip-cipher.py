@@ -27,11 +27,11 @@ def key_gen():
         main_key = int(getpass.getpass('Enter a positive integer as a numerical key: ')) #need try except here
     except ValueError as err:
         print err, '; please enter a positive integer.'
-        key_gen()
+        return key_gen()
     else:
         if main_key < 1:
             print 'Please enter a positive integer.'
-            key_gen()
+            return key_gen()
         else:
             return main_key
 
@@ -49,7 +49,7 @@ def encrypt(msg, key):
         i += 1
         
     encrypted =  encrypted_msg + encrypt_tail
-   
+    
     print 'Encrypted message is:', encrypted
 
 def encrypt_prep():
