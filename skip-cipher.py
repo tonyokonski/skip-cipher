@@ -62,21 +62,19 @@ def encrypt_prep():
 
     encrypted_message = encrypt(new_main_msg, key)
     
-def decrypt(msg, key):
-    # msg is the string to decrypt and key is the cryptographic key    
+def decrypt():
     
+    msg = raw_input('Please type in or paste the message that you would like to decrypt and then press ENTER:' )
     i = 0
     decrypted_msg = ''
+    key = key_gen()
     
-    while i < len(msg) - key: # skips key number of chars and returns the decrypted string. len(msg) - 1 prevents the loop from exceeding the string index.
+    while i < len(msg) - key: 
         i += key
         decrypted_msg += msg[i]
         i += 1
                 
-    #print decrypted_msg # for testing purposes
-    #print msg # for testing purposes
-    
-    return decrypted_msg
+    print 'Decrypted message is:', decrypted_msg
 
 def secrecy():
 
@@ -89,7 +87,7 @@ def secrecy():
         if x == 1:
             encrypt_prep()
         elif x == 2:
-            print 'Sent to decryption function'
+            decrypt()
         else:
             print 'Number entered is not a 1 or 2. Please enter a 1 to encrypt or a 2 to decrypt.'
             secrecy()
